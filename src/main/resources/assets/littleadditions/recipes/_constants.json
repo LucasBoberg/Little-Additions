@@ -1,0 +1,9 @@
+[
+  {
+    "name": "GRINDSTONE",
+    "ingredient": {
+      "item": "littleadditions:grindstone",
+      "data": 32767
+    }
+  }
+]

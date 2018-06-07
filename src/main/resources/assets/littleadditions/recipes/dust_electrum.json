@@ -1,0 +1,25 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "type": "forge:ore_dict",
+            "ore": "dustGold"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "dustGold"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "dustSilver"
+        },
+        {
+            "type": "forge:ore_dict",
+            "ore": "dustSilver"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:dust_electrum"
+    }
+}

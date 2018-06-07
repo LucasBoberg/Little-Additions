@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "I"
+    ],
+    "key": {
+        "I": {
+            "type": "forge:ore_dict",
+            "ore": "ingotSilver"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:nugget_silver",
+        "count": 9
+    }
+}

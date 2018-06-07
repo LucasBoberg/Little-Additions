@@ -1,0 +1,15 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "item": "littleadditions:speed_core"
+        },
+        {
+            "item": "littleadditions:belt"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:walking_belt"
+    }
+}

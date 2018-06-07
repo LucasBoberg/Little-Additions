@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " CS",
+        "CCC",
+        " C "
+    ],
+    "key": {
+        "S": {
+            "type": "forge:ore_dict",
+            "ore": "stickWood"
+        },
+        "C": {
+            "type": "forge:ore_dict",
+            "ore": "cobblestone"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:grindstone"
+    }
+}

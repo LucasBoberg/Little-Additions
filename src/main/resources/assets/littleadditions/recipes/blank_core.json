@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "NIN",
+        "IRI",
+        "NIN"
+    ],
+    "key": {
+        "N": {
+            "type": "forge:ore_dict",
+            "ore": "nuggetElectrum"
+        },
+        "I": {
+          "type": "forge:ore_dict",
+          "ore": "ingotElectrum"
+        },
+        "R": {
+          "item": "minecraft:redstone"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:blank_core"
+    }
+}

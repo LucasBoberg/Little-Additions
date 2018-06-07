@@ -1,0 +1,16 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:blaze_rod"
+        },
+        {
+            "item": "#GRINDSTONE"
+        }
+    ],
+    "result":
+    {
+        "item": "minecraft:blaze_powder",
+        "count": 4
+    }
+}

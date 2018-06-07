@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "FMF",
+        "BPB"
+    ],
+    "key": {
+        "B": {
+            "type": "forge:ore_dict",
+            "ore": "ingotBronze"
+        },
+        "F": {
+            "item": "minecraft:furnace"
+        },
+        "M": {
+            "item": "littleadditions:case_machine"
+        },
+        "P": {
+            "item": "littleadditions:pcb"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:alloy_merger"
+    }
+}

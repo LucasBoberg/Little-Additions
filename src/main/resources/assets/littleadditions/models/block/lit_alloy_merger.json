@@ -1,0 +1,12 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "particle": "littleadditions:blocks/alloy_merger_top",
+        "up": "littleadditions:blocks/lit_alloy_merger_top",
+        "down": "littleadditions:blocks/machine_bottom",
+        "north": "littleadditions:blocks/lit_alloy_merger_front",
+        "east": "littleadditions:blocks/machine_side",
+        "south": "littleadditions:blocks/machine_side",
+        "west": "littleadditions:blocks/machine_side"
+    }
+}

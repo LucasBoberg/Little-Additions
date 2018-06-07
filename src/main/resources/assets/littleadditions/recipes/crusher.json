@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "FFF",
+        " M ",
+        " P "
+    ],
+    "key": {
+        "F": {
+            "item": "minecraft:flint"
+        },
+        "M": {
+            "item": "littleadditions:case_machine"
+        },
+        "P": {
+            "item": "littleadditions:pcb"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:crusher"
+    }
+}

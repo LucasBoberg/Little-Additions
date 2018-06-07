@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "GRG",
+        "NNN"
+    ],
+    "key": {
+        "R": {
+            "item": "minecraft:redstone"
+        },
+        "G": {
+            "type": "forge:ore_dict",
+            "ore": "dyeGreen"
+        },
+        "N": {
+            "type": "forge:ore_dict",
+            "ore": "nuggetCopper"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:pcb"
+    }
+}

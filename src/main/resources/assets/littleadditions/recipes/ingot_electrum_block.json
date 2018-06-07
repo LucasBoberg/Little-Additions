@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "B"
+    ],
+    "key": {
+        "B": {
+            "type": "forge:ore_dict",
+            "ore": "blockElectrum"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:ingot_electrum",
+        "count": 9
+    }
+}

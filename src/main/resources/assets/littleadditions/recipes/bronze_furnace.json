@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "F",
+        "M",
+        "P"
+    ],
+    "key": {
+        "F": {
+            "item": "minecraft:furnace"
+        },
+        "M": {
+            "item": "littleadditions:case_machine"
+        },
+        "P": {
+            "item": "littleadditions:pcb"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:bronze_furnace"
+    }
+}

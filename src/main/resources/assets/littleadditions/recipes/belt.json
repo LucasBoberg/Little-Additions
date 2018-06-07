@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SLS",
+        "L L",
+        "SLS"
+    ],
+    "key": {
+        "L": {
+            "type": "forge:ore_dict",
+            "ore": "leather"
+        },
+        "S": {
+            "type": "forge:ore_dict",
+            "ore": "string"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:belt"
+    }
+}

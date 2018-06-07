@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=north,running=false": { "model": "littleadditions:alloy_merger" },
+    "facing=east,running=false": { "model": "littleadditions:alloy_merger", "y": 90 },
+    "facing=south,running=false": { "model": "littleadditions:alloy_merger", "y": 180 },
+    "facing=west,running=false": { "model": "littleadditions:alloy_merger", "y": 270 },
+    "facing=north,running=true": { "model": "littleadditions:lit_alloy_merger" },
+    "facing=east,running=true": { "model": "littleadditions:lit_alloy_merger", "y": 90 },
+    "facing=south,running=true": { "model": "littleadditions:lit_alloy_merger", "y": 180 },
+    "facing=west,running=true": { "model": "littleadditions:lit_alloy_merger", "y": 270 }
+  }
+}

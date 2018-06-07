@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " B ",
+        "BCB",
+        "BBB"
+    ],
+    "key": {
+        "B": {
+            "type": "forge:ore_dict",
+            "ore": "ingotBronze"
+        },
+        "C": {
+            "type": "forge:ore_dict",
+            "ore": "ingotCopper"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:case_machine"
+    }
+}

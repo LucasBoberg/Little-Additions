@@ -1,0 +1,15 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:coal"
+        },
+        {
+            "item": "#GRINDSTONE"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:dust_gold"
+    }
+}
