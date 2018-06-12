@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "I I",
+        "III",
+        "III"
+    ],
+    "key": {
+        "I": {
+            "type": "forge:ore_dict",
+            "ore": "ingotBronze"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:chestplate_bronze"
+    }
+}
