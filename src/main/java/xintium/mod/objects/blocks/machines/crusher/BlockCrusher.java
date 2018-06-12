@@ -25,6 +25,7 @@ import xintium.mod.Main;
 import xintium.mod.init.BlockInit;
 import xintium.mod.objects.blocks.BlockBase;
 import xintium.mod.util.Reference;
+import xintium.mod.util.handlers.ConfigHandler;
 
 import javax.annotation.Nullable;
 import java.util.Random;
@@ -55,7 +56,7 @@ public class BlockCrusher extends BlockBase implements ITileEntityProvider {
     @Override
     public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ) {
         if(!worldIn.isRemote) {
-            playerIn.openGui(Main.instance, Reference.GUI_CRUSHER, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            playerIn.openGui(Main.instance, ConfigHandler.GUI_CRUSHER, worldIn, pos.getX(), pos.getY(), pos.getZ());
         }
 
         return true;

@@ -4,6 +4,7 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import xintium.mod.Main;
 import xintium.mod.init.ItemInit;
+import xintium.mod.util.handlers.ConfigHandler;
 import xintium.mod.util.interfaces.IHasModel;
 
 public class ArmorBase extends ItemArmor implements IHasModel {
@@ -14,7 +15,9 @@ public class ArmorBase extends ItemArmor implements IHasModel {
         setRegistryName(name);
         setCreativeTab(Main.LITTLEADDITIONSTAB);
 
-        ItemInit.ITEMS.add(this);
+        if (!ConfigHandler.bronzeArmor){
+            ItemInit.ITEMS.add(this);
+        }
     }
 
     @Override

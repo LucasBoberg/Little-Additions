@@ -19,6 +19,7 @@ import xintium.mod.objects.items.food.ItemBaseFood;
 import xintium.mod.objects.items.food.ItemSeedsTomato;
 import xintium.mod.objects.tools.*;
 import xintium.mod.util.Reference;
+import xintium.mod.util.handlers.ConfigHandler;
 
 public class ItemInit {
 

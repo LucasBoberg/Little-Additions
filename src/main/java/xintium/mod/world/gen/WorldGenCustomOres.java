@@ -12,6 +12,7 @@ import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import xintium.mod.init.BlockInit;
+import xintium.mod.util.handlers.ConfigHandler;
 
 public class WorldGenCustomOres implements IWorldGenerator {
 	
@@ -30,9 +31,15 @@ public class WorldGenCustomOres implements IWorldGenerator {
 			
 			break;
 		case 0:
-			runGenerator(ore_copper, world, random, chunkX, chunkZ, 20, 8, 68);
-			runGenerator(ore_tin, world, random, chunkX, chunkZ, 20, 6, 42);
-			runGenerator(ore_silver, world, random, chunkX, chunkZ, 15, 0, 28);
+			if (ConfigHandler.generateCopper) {
+				runGenerator(ore_copper, world, random, chunkX, chunkZ, 20, 8, 68);
+			}
+			if (ConfigHandler.generateTin) {
+				runGenerator(ore_tin, world, random, chunkX, chunkZ, 20, 6, 42);
+			}
+			if (ConfigHandler.generateSilver) {
+				runGenerator(ore_silver, world, random, chunkX, chunkZ, 15, 0, 28);
+			}
 			break;
 		case 1:
 			

@@ -3,6 +3,7 @@ package xintium.mod.objects.tools;
 import net.minecraft.item.ItemSpade;
 import xintium.mod.Main;
 import xintium.mod.init.ItemInit;
+import xintium.mod.util.handlers.ConfigHandler;
 import xintium.mod.util.interfaces.IHasModel;
 
 public class ToolShovel extends ItemSpade implements IHasModel {
@@ -12,7 +13,9 @@ public class ToolShovel extends ItemSpade implements IHasModel {
         setRegistryName(name);
         setCreativeTab(Main.LITTLEADDITIONSTAB);
 
-        ItemInit.ITEMS.add(this);
+        if (!ConfigHandler.bronzeTools){
+            ItemInit.ITEMS.add(this);
+        }
     }
 
     @Override

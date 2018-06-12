@@ -7,6 +7,8 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
@@ -47,11 +49,12 @@ public class RegistryHandler {
 		}
 	}
 	
-	public static void preInitRegistries() {
+	public static void preInitRegistries(FMLPreInitializationEvent event) {
+	    ConfigHandler.registerConfig(event);
 		GameRegistry.registerWorldGenerator(new WorldGenCustomOres(), 0);
 	}
 
-	public static void initRegistries() {
+	public static void initRegistries(FMLInitializationEvent event) {
 		OreDictionaryCompat.registerOres();
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 		RecipesInit.init();

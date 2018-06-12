@@ -9,6 +9,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import xintium.mod.util.handlers.ConfigHandler;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -48,7 +49,7 @@ public class ItemWalkingBelt extends ItemBauble {
     }
 
     private void modifySpeed(EntityPlayer player) {
-        player.capabilities.setPlayerWalkSpeed(0.15f);
+        player.capabilities.setPlayerWalkSpeed(ConfigHandler.WALKING_SPEED_MODIFIER);
         if (!player.getEntityWorld().isRemote) {
             player.sendPlayerAbilities();
         }

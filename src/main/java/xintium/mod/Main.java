@@ -13,9 +13,13 @@ import xintium.mod.tabs.LittleAdditionsTab;
 import xintium.mod.util.Reference;
 import xintium.mod.util.handlers.RegistryHandler;
 
+import java.io.File;
+
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class Main {
-	
+
+	public static File config;
+
 	@Instance
 	public static Main instance;
 	
@@ -26,11 +30,11 @@ public class Main {
 	
 	@EventHandler
 	public static void preInit(FMLPreInitializationEvent event) {
-		RegistryHandler.preInitRegistries();
+		RegistryHandler.preInitRegistries(event);
 	}
 	@EventHandler
 	public static void init(FMLInitializationEvent event) {
-		RegistryHandler.initRegistries();
+		RegistryHandler.initRegistries(event);
 	}
 	@EventHandler
 	public static void postInit(FMLPostInitializationEvent event) {}

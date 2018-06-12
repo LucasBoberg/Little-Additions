@@ -11,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
+import xintium.mod.util.handlers.ConfigHandler;
 
 import javax.annotation.Nullable;
 import java.util.List;
@@ -45,8 +46,7 @@ public class ItemMagnetCharm extends ItemBauble {
             EntityPlayer player = (EntityPlayer)entity;
             if(player.isSpectator()) return;
             if(!player.isSneaking()) {
-                int range = 6;
-                List<EntityItem> items = entity.getEntityWorld().getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(entity.posX-range, entity.posY-range, entity.posZ-range, entity.posX+range, entity.posY+range, entity.posZ+range));
+                List<EntityItem> items = entity.getEntityWorld().getEntitiesWithinAABB(EntityItem.class, new AxisAlignedBB(entity.posX-ConfigHandler.MAGNET_RANGE, entity.posY-ConfigHandler.MAGNET_RANGE, entity.posZ-ConfigHandler.MAGNET_RANGE, entity.posX+ConfigHandler.MAGNET_RANGE, entity.posY+ConfigHandler.MAGNET_RANGE, entity.posZ+ConfigHandler.MAGNET_RANGE));
                 if(!items.isEmpty()){
                     for(EntityItem item : items){
                         if(item.getEntityData().getBoolean("PreventRemoteMovement")) continue;

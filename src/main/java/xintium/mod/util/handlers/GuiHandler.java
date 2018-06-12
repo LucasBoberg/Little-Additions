@@ -22,18 +22,18 @@ public class GuiHandler implements IGuiHandler {
     @Nullable
     @Override
     public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        if (ID == Reference.GUI_ALLOY_MERGER) return new ContainerAlloyMerger(player.inventory, (TileEntityAlloyMerger)world.getTileEntity(new BlockPos(x, y, z)));
-        if (ID == Reference.GUI_CRUSHER) return new ContainerCrusher(player.inventory, (TileEntityCrusher)world.getTileEntity(new BlockPos(x, y, z)));
-        if (ID == Reference.GUI_BRONZE_FURNACE) return new ContainerBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_ALLOY_MERGER) return new ContainerAlloyMerger(player.inventory, (TileEntityAlloyMerger)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_CRUSHER) return new ContainerCrusher(player.inventory, (TileEntityCrusher)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_BRONZE_FURNACE) return new ContainerBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)world.getTileEntity(new BlockPos(x, y, z)));
         return null;
     }
 
     @Nullable
     @Override
     public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-        if (ID == Reference.GUI_ALLOY_MERGER) return new GuiAlloyMerger(player.inventory, (TileEntityAlloyMerger)world.getTileEntity(new BlockPos(x, y, z)));
-        if (ID == Reference.GUI_CRUSHER) return new GuiCrusher(player.inventory, (TileEntityCrusher)world.getTileEntity(new BlockPos(x, y, z)));
-        if (ID == Reference.GUI_BRONZE_FURNACE) return new GuiBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_ALLOY_MERGER) return new GuiAlloyMerger(player.inventory, (TileEntityAlloyMerger)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_CRUSHER) return new GuiCrusher(player.inventory, (TileEntityCrusher)world.getTileEntity(new BlockPos(x, y, z)));
+        if (ID == ConfigHandler.GUI_BRONZE_FURNACE) return new GuiBronzeFurnace(player.inventory, (TileEntityBronzeFurnace)world.getTileEntity(new BlockPos(x, y, z)));
         return null;
     }
 }
