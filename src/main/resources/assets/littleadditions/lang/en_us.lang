@@ -26,10 +26,13 @@ item.dust_iron.name=Iron Dust
 
 item.pcb.name=PCB
 
+item.flour.name=Flour
 item.can_tin.name=Tin Can
 item.sauce_tomato.name=Tomato Sauce
 item.tomato.name=Tomato
 item.seeds_tomato.name=Tomato Seeds
+item.cheese.name=Cheese
+item.pizza.name=Pizza
 
 item.grindstone.name=Grindstone
 grindstone.info.short=Can be used multiple times when crafting

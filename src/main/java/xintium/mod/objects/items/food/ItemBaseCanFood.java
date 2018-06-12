@@ -15,6 +15,7 @@ public class ItemBaseCanFood extends ItemFood implements IHasModel {
         setUnlocalizedName(name);
         setRegistryName(name);
         setCreativeTab(Main.LITTLEADDITIONSTAB);
+        setContainerItem(ItemInit.CAN_TIN);
         setMaxStackSize(1);
         ItemInit.ITEMS.add(this);
     }

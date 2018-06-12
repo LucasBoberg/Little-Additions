@@ -1,0 +1,15 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "item": "minecraft:wheat"
+        },
+        {
+            "item": "#GRINDSTONE"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:flour"
+    }
+}

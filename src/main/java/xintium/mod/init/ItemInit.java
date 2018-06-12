@@ -64,11 +64,15 @@ public class ItemInit {
 	public static final Item MAGNET_CHARM = new ItemMagnetCharm("magnet_charm");
 
 	// Food
+    public static final Item FLOUR = new ItemBase("flour");
     public static final Item CAN_TIN = new ItemBase("can_tin");
     public static final Item SAUCE_TOMATO = new ItemBaseCanFood("sauce_tomato", 1.2f, 4);
 
     public static final Item TOMATO = new ItemBaseFood("tomato", 1.0f, 2, false);
     public static final Item SEEDS_TOMATO = new ItemSeedsTomato("seeds_tomato");
+
+    public static final Item CHEESE = new ItemBaseFood("cheese", 1.2f, 5, false);
+    public static final Item PIZZA = new ItemBaseFood("pizza", 0.8f, 18, true);
 
 	// Tools
     public static final Item AXE_BRONZE = new ToolAxe("axe_bronze", TOOL_BRONZE);

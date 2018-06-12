@@ -1,0 +1,21 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "item": "littleadditions:cheese"
+        },
+        {
+            "item": "littleadditions:cheese"
+        },
+        {
+            "item": "littleadditions:flour"
+        },
+        {
+          "item": "littleadditions:sauce_tomato"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:pizza"
+    }
+}
