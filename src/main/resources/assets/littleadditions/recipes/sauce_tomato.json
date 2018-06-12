@@ -1,0 +1,16 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": [
+        {
+            "type": "forge:ore_dict",
+            "ore": "cropTomato"
+        },
+        {
+            "item": "littleadditions:can_tin"
+        }
+    ],
+    "result":
+    {
+        "item": "littleadditions:sauce_tomato"
+    }
+}

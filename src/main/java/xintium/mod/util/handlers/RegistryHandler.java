@@ -2,7 +2,9 @@ package xintium.mod.util.handlers;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -53,5 +55,6 @@ public class RegistryHandler {
 		OreDictionaryCompat.registerOres();
 		NetworkRegistry.INSTANCE.registerGuiHandler(Main.instance, new GuiHandler());
 		RecipesInit.init();
+		MinecraftForge.addGrassSeed(new ItemStack(ItemInit.SEEDS_TOMATO), 10);
 	}
 }

@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " I ",
+        "I I",
+        " I "
+    ],
+    "key": {
+        "I": {
+            "type": "forge:ore_dict",
+            "ore": "ingotTin"
+        }
+    },
+    "result":
+    {
+        "item": "littleadditions:can_tin",
+        "count": 4
+    }
+}

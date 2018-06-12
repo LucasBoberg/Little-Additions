@@ -26,6 +26,11 @@ item.dust_iron.name=Iron Dust
 
 item.pcb.name=PCB
 
+item.can_tin.name=Tin Can
+item.sauce_tomato.name=Tomato Sauce
+item.tomato.name=Tomato
+item.seeds_tomato.name=Tomato Seeds
+
 item.grindstone.name=Grindstone
 grindstone.info.short=Can be used multiple times when crafting
 grindstone.info.long=Grindstones are used to grind items into dust and powder etc. One grindstone works for a couple of crafting tasks then you will have to get a new one.
@@ -63,6 +68,8 @@ tile.ore_silver.name=Silver Ore
 tile.block_bronze.name=Block of Bronze
 tile.block_silver.name=Block of Silver
 tile.block_electrum.name=Block of Electrum
+
+tile.tomato_plant.name=Tomato Plant
 
 tile.case_machine.name=Machine Case
 tile.alloy_merger.name=Alloy Merger

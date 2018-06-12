@@ -1,10 +1,12 @@
 package xintium.mod.util.compat.jei;
 
 import mezz.jei.api.*;
+import mezz.jei.api.ingredients.IIngredientBlacklist;
 import mezz.jei.api.ingredients.IIngredientRegistry;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
 import mezz.jei.api.recipe.transfer.IRecipeTransferRegistry;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.translation.I18n;
 import xintium.mod.init.BlockInit;
@@ -39,6 +41,9 @@ public class JEICompat implements IModPlugin {
         final IIngredientRegistry ingredientRegistry = registry.getIngredientRegistry();
         final IJeiHelpers jeiHelpers = registry.getJeiHelpers();
         IRecipeTransferRegistry recipeTransfer = registry.getRecipeTransferRegistry();
+        IIngredientBlacklist blacklist = registry.getJeiHelpers().getIngredientBlacklist();
+
+        blacklist.addIngredientToBlacklist(new ItemStack(Item.getItemFromBlock(BlockInit.TOMATO_PLANT)));
 
         registry.addRecipes(AlloyMergerRecipeMaker.getRecipes(jeiHelpers), RecipeCategories.ALLOYMERGER);
         registry.addRecipeClickArea(GuiAlloyMerger.class, 78, 32, 28, 23, RecipeCategories.ALLOYMERGER, VanillaRecipeCategoryUid.FUEL);

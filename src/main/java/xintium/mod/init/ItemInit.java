@@ -14,6 +14,9 @@ import xintium.mod.objects.items.ItemBase;
 import xintium.mod.objects.items.ItemGrindstone;
 import xintium.mod.objects.items.ItemWalkingBelt;
 import xintium.mod.objects.items.ItemMagnetCharm;
+import xintium.mod.objects.items.food.ItemBaseCanFood;
+import xintium.mod.objects.items.food.ItemBaseFood;
+import xintium.mod.objects.items.food.ItemSeedsTomato;
 import xintium.mod.objects.tools.*;
 import xintium.mod.util.Reference;
 
@@ -59,6 +62,13 @@ public class ItemInit {
 	public static final Item MAGNET_CORE = new ItemBase("magnet_core");
 	public static final Item WALKING_BELT = new ItemWalkingBelt("walking_belt");
 	public static final Item MAGNET_CHARM = new ItemMagnetCharm("magnet_charm");
+
+	// Food
+    public static final Item CAN_TIN = new ItemBase("can_tin");
+    public static final Item SAUCE_TOMATO = new ItemBaseCanFood("sauce_tomato", 1.2f, 4);
+
+    public static final Item TOMATO = new ItemBaseFood("tomato", 1.0f, 2, false);
+    public static final Item SEEDS_TOMATO = new ItemSeedsTomato("seeds_tomato");
 
 	// Tools
     public static final Item AXE_BRONZE = new ToolAxe("axe_bronze", TOOL_BRONZE);
