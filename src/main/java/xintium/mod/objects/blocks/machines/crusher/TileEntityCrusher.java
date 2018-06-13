@@ -7,10 +7,12 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.item.*;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
@@ -23,9 +25,13 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class TileEntityCrusher extends TileEntity implements IInventory, ITickable {
+public class TileEntityCrusher extends TileEntity implements IInventory, ITickable, ISidedInventory {
     private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
     private String customName;
+
+    private static final int[] SLOTS_TOP = new int[]{0};
+    private static final int[] SLOTS_BOTTOM = new int[]{2, 1};
+    private static final int[] SLOTS_SIDES = new int[]{1};
 
     private int burnTime;
     private int currentBurnTime;
@@ -306,8 +312,8 @@ public class TileEntityCrusher extends TileEntity implements IInventory, ITickab
     public boolean isItemValidForSlot(int index, ItemStack stack)
     {
 
-        if(index == 3) return false;
-        else if(index != 2) return true;
+        if(index == 2) return false;
+        else if(index != 1) return true;
         else
         {
             return isItemFuel(stack);
@@ -366,5 +372,31 @@ public class TileEntityCrusher extends TileEntity implements IInventory, ITickab
     public void clear()
     {
         this.inventory.clear();
+    }
+
+    @Override
+    public int[] getSlotsForFace(EnumFacing side) {
+        if (side == EnumFacing.DOWN) {
+            return SLOTS_BOTTOM;
+        } else {
+            return side == EnumFacing.UP ? SLOTS_TOP : SLOTS_SIDES;
+        }
+    }
+
+    @Override
+    public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction) {
+        return this.isItemValidForSlot(index, itemStackIn);
+    }
+
+    @Override
+    public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction) {
+        if (direction == EnumFacing.DOWN && index == 1) {
+            Item item = stack.getItem();
+            if (item != Items.WATER_BUCKET && item != Items.BUCKET) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }

@@ -14,12 +14,12 @@ public class SlotAlloyMergerFuel extends Slot {
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        return TileEntityAlloyMerger.isItemFuel(stack);
+        return TileEntityAlloyMerger.isItemFuel(stack) || isBucket(stack);
     }
 
     @Override
     public int getItemStackLimit(ItemStack stack) {
-        return super.getItemStackLimit(stack);
+        return isBucket(stack) ? 1 : super.getItemStackLimit(stack);
     }
 
     public static boolean isBucket(ItemStack stack) {

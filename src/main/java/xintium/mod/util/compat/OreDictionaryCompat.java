@@ -35,5 +35,6 @@ public class OreDictionaryCompat {
         OreDictionary.registerOre("dustIron", ItemInit.DUST_IRON);
 
         OreDictionary.registerOre("cropTomato", ItemInit.TOMATO);
+        OreDictionary.registerOre("dyeRed", ItemInit.TOMATO);
     }
 }
