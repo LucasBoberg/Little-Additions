@@ -14,6 +14,10 @@ public class ConfigHandler {
     public static int GUI_CRUSHER = 1;
     public static int GUI_BRONZE_FURNACE = 2;
 
+    public static int CRUSHER_SPEED = 450;
+    public static int ALLOY_MERGER_SPEED = 350;
+    public static int BRONZE_FURNACE_SPEED = 150;
+
     public static int MAGNET_RANGE = 6;
     public static float WALKING_SPEED_MODIFIER = 0.15f;
 
@@ -45,6 +49,12 @@ public class ConfigHandler {
         config.addCustomCategoryComment(category, "Declare whether tools and armor should be available");
         bronzeTools = config.getBoolean("Remove Bronze Tools", category, false, "Should Bronze Tools not be available");
         bronzeArmor = config.getBoolean("Remove Bronze Armor", category, false, "Should Bronze Armor not be available");
+
+        category = "Machines";
+        config.addCustomCategoryComment(category, "Tweak the speed of all the machines added by Little Additions");
+        ALLOY_MERGER_SPEED = config.getInt("Alloy Merger processing speed", category, 350, 10, 700, "Change the processing speed of the Alloy Merger. Vanilla furnace speed is 200.");
+        CRUSHER_SPEED = config.getInt("Crusher processing speed", category, 450, 10, 700, "Change the processing speed of the Crusher. Vanilla furnace speed is 200.");
+        BRONZE_FURNACE_SPEED = config.getInt("Bronze Furnace processing speed", category, 150, 10, 200, "Change the processing speed of the Bronze Furnace. Vanilla furnace speed is 200.");
 
         config.save();
     }

@@ -24,6 +24,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import xintium.mod.util.handlers.ConfigHandler;
 
 public class TileEntityAlloyMerger extends TileEntity implements IInventory, ITickable, ISidedInventory {
     private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(4, ItemStack.EMPTY);
@@ -225,7 +226,7 @@ public class TileEntityAlloyMerger extends TileEntity implements IInventory, ITi
 
     public int getCookTime(ItemStack input1, ItemStack input2)
     {
-        return 350;
+        return ConfigHandler.ALLOY_MERGER_SPEED;
     }
 
     private boolean canSmelt()

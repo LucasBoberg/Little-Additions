@@ -25,9 +25,14 @@ import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.event.ForgeEventFactory;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.items.CapabilityItemHandler;
+import xintium.mod.util.handlers.ConfigHandler;
+
+import javax.annotation.Nullable;
 
 public class TileEntityBronzeFurnace extends TileEntity implements IInventory, ITickable, ISidedInventory {
     private static final int[] SLOTS_TOP = new int[]{0};
@@ -210,7 +215,7 @@ public class TileEntityBronzeFurnace extends TileEntity implements IInventory, I
     }
 
     public int getCookTime(ItemStack stack) {
-        return 150;
+        return ConfigHandler.BRONZE_FURNACE_SPEED;
     }
 
     private boolean canSmelt() {

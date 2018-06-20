@@ -11,7 +11,7 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
 
-version = "1.6"
+version = "1.7"
 group = "xintium.mod.littleadditions" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "LittleAdditions"
 
@@ -44,6 +44,7 @@ repositories {
     name = "ModMaven"
     url = "modmaven.k-4u.nl"
   }
+  maven { url = "http://tehnut.info/maven" }
   maven {
     name = "thiakil"
     url = "http://maven.thiakil.com"
@@ -52,6 +53,7 @@ repositories {
 
 dependencies {
     deobfCompile "com.azanor.baubles:Baubles:1.12-1.5.2"
+    deobfProvided "mcp.mobius.waila:Hwyla:1.8.26-B41_1.12.2"
     // compile against the JEI API but do not include it at runtime
     deobfProvided "mezz.jei:jei_${mc_version}:${jei_version}:api"
     // at runtime, use the full JEI jar

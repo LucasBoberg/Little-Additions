@@ -23,5 +23,6 @@ public class RecipesInit {
 		GameRegistry.addSmelting(ItemInit.DUST_GOLD, new ItemStack(Items.GOLD_INGOT), 0.7F);
 
 		GameRegistry.addSmelting(ItemInit.FLOUR, new ItemStack(Items.BREAD), 0.7F);
+		GameRegistry.addSmelting(Items.EGG, new ItemStack(ItemInit.BOILED_EGG), 0.7F);
 	}
 }

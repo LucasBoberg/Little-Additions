@@ -93,7 +93,7 @@ public class ContainerAlloyMerger extends Container {
             }
             else if(index != 2 && index != 1 && index != 0)
             {
-                Slot slot1 = (Slot)this.inventorySlots.get(index + 1);
+                Slot slot1 = (Slot)this.inventorySlots.get(index);
 
                 if(!AlloyMergerRecipes.getInstance().getAlloyMergerResult(stack1, slot1.getStack()).isEmpty())
                 {

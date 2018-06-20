@@ -72,6 +72,8 @@ public class ItemInit {
     public static final Item TOMATO = new ItemBaseFood("tomato", 1.0f, 2, false);
     public static final Item SEEDS_TOMATO = new ItemSeedsTomato("seeds_tomato");
 
+	public static final Item BOILED_EGG = new ItemBaseFood("boiled_egg", 1.2f, 5, false);
+
     public static final Item CHEESE = new ItemBaseFood("cheese", 1.2f, 5, false);
     public static final Item PIZZA = new ItemBaseFood("pizza", 0.8f, 18, true);
 

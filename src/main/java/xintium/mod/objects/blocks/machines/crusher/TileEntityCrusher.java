@@ -24,6 +24,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
+import xintium.mod.util.handlers.ConfigHandler;
 
 public class TileEntityCrusher extends TileEntity implements IInventory, ITickable, ISidedInventory {
     private NonNullList<ItemStack> inventory = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
@@ -226,7 +227,7 @@ public class TileEntityCrusher extends TileEntity implements IInventory, ITickab
 
     public int getCookTime(ItemStack input)
     {
-        return 450;
+        return ConfigHandler.CRUSHER_SPEED;
     }
 
     private boolean canSmelt()
